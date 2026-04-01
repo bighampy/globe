@@ -1,8 +1,13 @@
-<!DOCTYPE html>
-<!-- saved from url=(0062)https://tkartik.com/globe-to-flat-map/van-der-grinten-map.html -->
-<html lang="en" style="--bg-0: #000000; --bg-1: #060200; --bg-2: #140a03; --text: #f5d3a1; --muted: rgba(199, 162, 122, 0.78); --button-border: rgba(255, 255, 255, 0.28); --button-bg: rgba(20, 10, 3, 0.92); --button-bg-hover: rgba(20, 10, 3, 0.98);"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<!--
+  WebGL Globe Morph - Interactive 3D globe that morphs to Van der Grinten flat map.
+  Uses Three.js for rendering. GeoJSON world data embedded. Drag to rotate, double-click or
+  button to toggle projection. No build step required.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WebGL Globe Morph</title>
   <style>
     :root {
@@ -61,8 +66,13 @@
     }
 
   </style>
-<link href="chrome-extension://cjmfiochlaffhnellbhffgnjocahinnh/dogEar/dogEar.css" rel="stylesheet" type="text/css"></head>
-<body style="background: rgb(0, 0, 0);">
+</head>
+<body>
+  <button class="toggle-btn" id="toggleBtn" type="button" aria-label="Toggle globe / map" style="display:none">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+    </svg>
+  </button>
 
   <!-- GeoJSON world data (countries as polygons). Source: Natural Earth -->
   <script id="world-data" type="application/json">
@@ -887,6 +897,5 @@
 
     animate();
   </script>
-
-
-<canvas data-engine="three.js r163" width="2560" height="1388" style="display: block; width: 2048px; height: 1111px;"></canvas></body></html>
+</body>
+</html>
